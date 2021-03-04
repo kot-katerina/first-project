@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+}/*убираем отступы наследуемые от браузера*/
+
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  color: #000000;
+}/*параметры для всей страницы*/
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}/*флекс в колонку*/
+
+.header {
+  display: flex;
+  min-height: 600px;
+  max-height: 756px;
+  background-color: #f2f2f2;
+  position: relative;
+  overflow: hidden;
+}/*параметры хэдера*/
+
+.header__logo {
+  width: 183px;
+  height: 32px;
+  background-image: url(./images/logo_place_header.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 5;
+}/*параметры логотип яндекса*/
+
+.header__title {
+  display: flex;
+  width: 730px;
+  align-self: center;
+  margin-left: 64px;
+  z-index: 4;
+}/*позиционирование заголовка*/
+
+.header__h1 {
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+  align-self: center;
+}/*параметры заголовка*/
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;   
+}/*позиционирование логотипа хэдер*/
+
+.header__subtitle {
+  width: 388px;
+  position:absolute;
+  left: 64px;
+  bottom: 30px;
+  z-index: 3;
+}/*позиционирование подзаголовок*/
+
+.header__p {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal; 
+} /*параметры подзаголовка*/
+
+.link {
+  color: #2f80ed;
+  text-decoration: none;
+}/*параметры ссылки*/
+
+.link-before:before {
+    content: ' '
+}
+
+.header__main-illustration {
+  height: 608px;
+  width: 765px;
+} /*параметры блока с картинкой*/
+
+.header__main-illustration_position {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2; 
+}/*позиционирование блока с картинкой*/
+
+.header__square-pic {
+  height: 568px;
+  width: 568px;
+  background-color: #2f80ed;
+  position: absolute;
+  right: 0;
+  top: 64px;
+  z-index: 1;
+}/*позиционирование и параметры блока 'синий квадрат'*/
+
+.description {
+  display: flex;
+  justify-content: center;
+}/*общие параметры блока*/
+
+.flex-row {
+  display: flex;
+  flex-direction: row;   
+}/*флекс в ряд*/
+
+.two-columns {
+  margin-top: 100px;
+  justify-content: space-between;
+  width: 80%;
+}/*позиционирование элементов бриф и параграф*/
+
+.two-columns__brief {
+  width: 175px;
+}/*позиционирование блока заголовка*/
+ 
+.two-columns__main-text {
+  min-width: 784px;
+  width: 80%;
+}/*положение элемента main-text*/
+
+.brief__h2 {
+  color: #2f80ed;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal; 
+}/*параметры заголовка*/
+
+.two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;   
+}/*параметры параграф*/
+
+.two-columns__span-accent {
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: bold;  
+}/*параметры тэга span*/
+
+.two-columns__paragraph:nth-of-type(2n){
+   margin: 30px 0;
+}/*высота между строк*/
+
+.digits {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+}/*общие параметры дигитс*/
+
+.section-title {
+  width: 60%;
+}/*параметры блока с заголовком*/
+
+.title {
+  text-align: center;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}/*параметры заголовка (спользуем в блоках дигитс и кауфман)*/
+
+.subtitle {
+  width: 60%;
+  margin: 20px;
+}/*блок подзаголовок (спользуем в блоках дигитс и кауфман)*/
+
+.subtitle-h3 {
+  margin: 0;
+  text-align: center;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;   
+}/*параметры подзаголовка (спользуем в блоках дигитс и кауфман)*/
+
+.table {
+ margin-top: 0 auto;
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ align-content: space-around;
+ width: 1100px;
+}/*позиционирование блока табле (спользуем в блоках дигитс и кауфман)*/
+
+.cell {
+ width: 250px;
+ margin-top: 60px;
+}/*размеры карточки*/
+
+.heading {
+ line-height: 1.15;
+ font-size: 24px;
+ font-weight: bold;   
+}/*параметры заголовка (спользуем в блоках дигитс и кауфман)*/
+
+.text {
+  margin-top: 20px;
+  line-height: 1.12;
+  font-size: 18px;
+  font-weight: normal;
+}/*параметры текста (спользуем в блоках дигитс и кауфман)*/
+
+.feynman {
+ height: 790px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ height: 790px;
+ background-color: #f2f2f2;
+ background-image: url(./images/feynman.png);
+ background-position: bottom left;
+ background-repeat: no-repeat; 
+ position: relative;
+}/*параметры и позиционирование блока фейман*/
+
+.feynman__title {
+  margin-top: 100px;
+  width: 648px;
+}/*параметры блока заголовка*/
+
+.feynman_h2 {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}/* параметры текста заголовка*/
+
+.feunman__subtitle {
+   margin: 70px; 
+}/*параметры блока подзаголовка*/
+
+.feynman_h3 {
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: center; 
+}/*параметры текста подзаголовка*/
+
+.link_position {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;   
+}/*позиционирование ссылки*/
+
+.kaufman {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: #1f1f1f;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}/*параметры блока кауфман*/
+
+.triangle {
+  position: absolute;
+  right: -210px;
+}/*позиционирование картинки*/
+
+.section-title-dark{
+  z-index: 1;
+}/*позиционирование заголовка*/
+
+.title-dark {
+  color: white;
+}/*флекс элемент в значении дарк*/
+
+.subtitle-dark {
+ color: white;
+  z-index: 1;  
+}/*флекс элемент в значении дарк*/
+
+.table-dark {
+  z-index: 1;
+}/*индекс для блока табле*/
+
+.cell-dark {  
+  margin-top: 80px;
+  width: 200px;
+}/*размеры карточки темная тема*/
+
+.heading-dark {
+  color: white; 
+}/*параметры заголовка темная тема*/
+
+.text-dark {
+  color: white;
+}/*параметры текста темная тема*/
+
+.footer {
+  justify-content: center;
+  min-height: 350px;
+  background-color: #1f1f1f;
+  color: white;
+}/*основные параметры футера*/
+
+.footer__columns {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 90%;
+  justify-content: space-between;
+}/*параметры элемента columns*/
+
+.footer__column_content {
+  flex-basis: 711px;
+  justify-content: space-between; 
+}/*позиционирование элемента колумн*/
+
+.logo_place_footer {
+ width: 183px;
+ height: 35px;
+ background-image: url(./images/logo_place_footer.svg);
+ background-size: contain;
+ background-repeat: no-repeat;
+}/*логотип яндекс подвал*/
+
+.footer_author {
+padding-top: 18px;
+}/*параметры блока автор*/
+
+.author_p {
+ line-height: 25px;
+ font-size: 18px;
+ font-weight: normal; 
+}/*параметры текста блока автор*/
+
+.column-heading {
+ margin-bottom: 20px;
+ line-height: 30px;
+ font-size: 18px;
+ font-weight: bold;   
+}/*параметры заголовка в подвале*/
+
+.column-links {
+   margin-bottom: 16px;   
+}/*параметры блока с ссылками*/
+
+.column-link {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}/*параметры списка ссылок*/
+
+.social-icon {
+    margin-right: 10px;
+}/*параметры иконок*/
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal
+}/*параметры текста ссылок*/
